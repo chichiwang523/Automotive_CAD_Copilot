@@ -1,0 +1,35 @@
+[project]
+name = "cdcopilot"
+version = "0.1.0"
+description = "Automotive 2D CAD drawing review copilot for OCR, GD&T extraction, and checklist-based compliance checks."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pillow>=10.0.0",
+  "pydantic>=2.7.0",
+  "pyyaml>=6.0.1",
+  "rich>=13.7.0",
+  "typer>=0.12.0",
+]
+
+[project.optional-dependencies]
+ocr = [
+  "pytesseract>=0.3.10",
+  "opencv-python>=4.9.0.80",
+]
+train = [
+  "datasets>=2.19.0",
+  "transformers>=4.44.0",
+  "torch>=2.3.0",
+  "accelerate>=0.33.0",
+]
+dev = [
+  "pytest>=8.2.0",
+]
+
+[project.scripts]
+cdcopilot = "cdcopilot.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
