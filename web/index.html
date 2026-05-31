@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CDCopilot Drawing Review</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Automotive 2D Drawing Review</p>
+          <h1>CDCopilot</h1>
+        </div>
+        <div class="status-strip" aria-label="审查摘要">
+          <div><span id="totalCount">0</span><small>Checklist</small></div>
+          <div><span id="passCount">0</span><small>Pass</small></div>
+          <div><span id="failCount">0</span><small>Fail</small></div>
+          <div><span id="openCount">0</span><small>Open</small></div>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <aside class="review-sidebar" aria-label="上传和项目设置">
+          <section class="panel">
+            <div class="panel-heading">
+              <h2>输入</h2>
+              <button class="icon-button" id="loadSampleButton" type="button" title="载入示例 checklist" aria-label="载入示例 checklist">↺</button>
+            </div>
+
+            <label class="dropzone" for="drawingInput" id="drawingDropzone">
+              <span class="drop-icon" aria-hidden="true">▧</span>
+              <strong>上传图纸</strong>
+              <small>PDF、PNG、JPG、SVG</small>
+              <input id="drawingInput" type="file" accept=".pdf,.png,.jpg,.jpeg,.svg,.webp" />
+            </label>
+
+            <label class="dropzone" for="checklistInput" id="checklistDropzone">
+              <span class="drop-icon" aria-hidden="true">☷</span>
+              <strong>上传 checklist</strong>
+              <small>CSV、TSV、TXT 表格</small>
+              <input id="checklistInput" type="file" accept=".csv,.tsv,.txt" />
+            </label>
+
+            <div class="field-grid">
+              <label><span>零件号</span><input id="partNumber" type="text" placeholder="Part No." /></label>
+              <label><span>版本</span><input id="revision" type="text" placeholder="Rev." /></label>
+              <label><span>工程师</span><input id="reviewer" type="text" placeholder="MD Engineer" /></label>
+              <label><span>标准</span><input id="standard" type="text" placeholder="ISO 1101 / ISO 8015" /></label>
+            </div>
+
+            <div class="actions-row">
+              <button class="primary-button" id="runButton" type="button">Run Review</button>
+              <button class="secondary-button" id="clearButton" type="button">Clear</button>
+            </div>
+          </section>
+
+          <section class="panel evidence-panel">
+            <div class="panel-heading"><h2>当前证据</h2></div>
+            <div id="evidenceBox" class="evidence-box"><span>选择一条 checklist 查看证据、状态和备注。</span></div>
+          </section>
+        </aside>
+
+        <section class="drawing-area" aria-label="图纸预览">
+          <div class="section-header">
+            <div><p class="eyebrow">Drawing Preview</p><h2 id="drawingTitle">未上传图纸</h2></div>
+            <div class="toolbar" aria-label="图纸工具">
+              <button class="icon-button" type="button" id="fitButton" title="适配窗口" aria-label="适配窗口">⌂</button>
+              <button class="icon-button" type="button" id="zoomOutButton" title="缩小" aria-label="缩小">−</button>
+              <button class="icon-button" type="button" id="zoomInButton" title="放大" aria-label="放大">＋</button>
+            </div>
+          </div>
+          <div class="preview-frame" id="previewFrame"><div class="empty-preview"><span aria-hidden="true">▦</span><p>图纸预览会显示在这里</p></div></div>
+        </section>
+
+        <section class="checklist-area" aria-label="Checklist 审查表">
+          <div class="section-header">
+            <div><p class="eyebrow">Checklist Template</p><h2>审查结果</h2></div>
+            <div class="toolbar">
+              <button class="secondary-button" id="exportCsvButton" type="button">Export CSV</button>
+              <button class="secondary-button" id="exportJsonButton" type="button">Export JSON</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Item</th><th>Standard</th><th>Checklist</th><th>Status</th><th>Confidence</th><th>Evidence</th><th>Comment</th></tr>
+              </thead>
+              <tbody id="checklistBody"><tr class="empty-row"><td colspan="7">上传 checklist 或载入示例后开始审查。</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
