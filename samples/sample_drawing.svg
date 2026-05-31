@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <rect x="40" y="40" width="1320" height="820" fill="none" stroke="#111827" stroke-width="3"/>
+  <rect x="970" y="650" width="390" height="210" fill="none" stroke="#111827" stroke-width="2"/>
+  <line x1="970" y1="700" x2="1360" y2="700" stroke="#111827" stroke-width="2"/>
+  <line x1="970" y1="750" x2="1360" y2="750" stroke="#111827" stroke-width="2"/>
+  <line x1="970" y1="800" x2="1360" y2="800" stroke="#111827" stroke-width="2"/>
+  <line x1="1100" y1="650" x2="1100" y2="860" stroke="#111827" stroke-width="2"/>
+  <text x="990" y="682" font-family="Arial" font-size="24">PART</text>
+  <text x="1120" y="682" font-family="Arial" font-size="22">CAD-COPILOT-DEMO-001</text>
+  <text x="990" y="732" font-family="Arial" font-size="24">REV</text>
+  <text x="1120" y="732" font-family="Arial" font-size="24">A</text>
+  <text x="990" y="782" font-family="Arial" font-size="24">MATL</text>
+  <text x="1120" y="782" font-family="Arial" font-size="24">AL 6061</text>
+  <text x="990" y="832" font-family="Arial" font-size="24">STD</text>
+  <text x="1120" y="832" font-family="Arial" font-size="22">ISO 1101 / ISO 2768-mK</text>
+
+  <rect x="250" y="230" width="500" height="240" rx="18" fill="none" stroke="#111827" stroke-width="4"/>
+  <circle cx="375" cy="350" r="55" fill="none" stroke="#111827" stroke-width="4"/>
+  <circle cx="625" cy="350" r="55" fill="none" stroke="#111827" stroke-width="4"/>
+  <line x1="250" y1="530" x2="750" y2="530" stroke="#111827" stroke-width="2"/>
+  <line x1="250" y1="500" x2="250" y2="560" stroke="#111827" stroke-width="2"/>
+  <line x1="750" y1="500" x2="750" y2="560" stroke="#111827" stroke-width="2"/>
+  <text x="455" y="585" font-family="Arial" font-size="28">500 +/- 0.2</text>
+
+  <rect x="785" y="255" width="210" height="42" fill="none" stroke="#111827" stroke-width="2"/>
+  <line x1="840" y1="255" x2="840" y2="297" stroke="#111827" stroke-width="2"/>
+  <line x1="915" y1="255" x2="915" y2="297" stroke="#111827" stroke-width="2"/>
+  <text x="798" y="284" font-family="Arial" font-size="22">POS</text>
+  <text x="855" y="284" font-family="Arial" font-size="22">0.20</text>
+  <text x="930" y="284" font-family="Arial" font-size="22">A B</text>
+
+  <rect x="190" y="170" width="54" height="42" fill="none" stroke="#111827" stroke-width="2"/>
+  <text x="207" y="199" font-family="Arial" font-size="24">A</text>
+  <line x1="244" y1="191" x2="300" y2="250" stroke="#111827" stroke-width="2"/>
+  <text x="805" y="390" font-family="Arial" font-size="26">Ra 1.6</text>
+  <text x="80" y="820" font-family="Arial" font-size="24">NOTES: REMOVE BURRS. EDGE BREAK 0.2 +/- 0.1.</text>
+</svg>
