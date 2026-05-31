@@ -1,0 +1,99 @@
+# Public index of standards commonly used for automotive/mechanical 2D drawing review.
+# ISO standards text is copyrighted; this file stores only identifiers, public scope notes,
+# and links to official pages or publishers. Put licensed internal excerpts/checklists in
+# a private overlay file such as configs/internal_checklists.yaml.
+standards:
+  - id: ISO 128
+    area: Technical product documentation
+    review_focus:
+      - line types and drawing presentation
+      - view layout consistency
+      - section and projection conventions
+    source: https://www.iso.org/search.html?q=ISO%20128
+  - id: ISO 129-1
+    area: Dimensioning
+    review_focus:
+      - dimension text placement
+      - arrowheads, extension lines, and dimension lines
+      - redundant or missing dimensions
+    source: https://www.iso.org/search.html?q=ISO%20129-1
+  - id: ISO 1101
+    area: Geometrical tolerancing
+    review_focus:
+      - feature control frame structure
+      - tolerance value syntax
+      - datum references
+      - modifiers such as MMC/LMC/free state when allowed
+    source: https://www.iso.org/search.html?q=ISO%201101
+  - id: ISO 5459
+    area: Datums and datum systems
+    review_focus:
+      - datum feature identifiers
+      - datum order and grouping
+      - datum target notation
+    source: https://www.iso.org/search.html?q=ISO%205459
+  - id: ISO 8015
+    area: GPS fundamentals
+    review_focus:
+      - independence principle
+      - default GPS assumptions stated on drawing
+      - relationship between size, form, orientation, and location controls
+    source: https://www.iso.org/search.html?q=ISO%208015
+  - id: ISO 14405-1
+    area: Dimensional tolerancing of linear sizes
+    review_focus:
+      - size tolerances
+      - two-point size and envelope requirement usage
+      - ambiguous plus/minus limits
+    source: https://www.iso.org/search.html?q=ISO%2014405-1
+  - id: ISO 21920
+    area: Surface texture
+    review_focus:
+      - surface texture symbol presence
+      - parameter syntax such as Ra/Rz
+      - manufacturing allowance notation
+    source: https://www.iso.org/search.html?q=ISO%2021920
+  - id: ISO 2768
+    area: General tolerances
+    review_focus:
+      - legacy general tolerance references
+      - title-block tolerance class
+      - internal policy for withdrawn/replaced references
+    source: https://www.iso.org/search.html?q=ISO%202768
+  - id: ASME Y14.5
+    area: GD&T, non-ISO baseline
+    review_focus:
+      - supplier drawings using ASME instead of ISO
+      - mixed-standard detection
+      - migration risk flags
+    source: https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing
+
+default_checklist:
+  - id: title_block_standard
+    severity: high
+    description: Drawing title block should state the governing drawing/GPS standard.
+    evidence: title_block_text
+  - id: title_block_scale_revision
+    severity: medium
+    description: Drawing should contain scale, revision, material, part number, and sheet fields.
+    evidence: title_block_text
+  - id: dimensions_have_tolerances
+    severity: high
+    description: Critical dimensions should have explicit tolerance or a referenced general tolerance.
+    evidence: dimensions
+  - id: datum_defined_before_use
+    severity: high
+    description: Datum identifiers referenced in feature control frames should be defined on the drawing.
+    evidence: gd_t_frames
+  - id: feature_control_frame_syntax
+    severity: high
+    description: Feature control frames should contain a characteristic, tolerance value, and required datum references.
+    evidence: gd_t_frames
+  - id: surface_texture_syntax
+    severity: medium
+    description: Surface texture indications should use recognized parameter names and numeric values.
+    evidence: surface_texture_notes
+  - id: notes_no_ambiguous_language
+    severity: low
+    description: Notes should avoid ambiguous terms such as typical, approximate, or as required unless internally allowed.
+    evidence: notes
