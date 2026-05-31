@@ -10,7 +10,7 @@ from rich.table import Table
 from .ocr import extract_document
 from .rules import load_checklist, review_document
 
-app = typer.Typer(help="CDCopilot drawing review CLI")
+app = typer.Typer(help="CAD Copilot drawing review CLI")
 console = Console()
 
 
@@ -24,7 +24,7 @@ def review(
     checklist = load_checklist(standards)
     report = review_document(document, checklist)
 
-    table = Table(title=f"CDCopilot review: {drawing.name}")
+    table = Table(title=f"CAD Copilot review: {drawing.name}")
     table.add_column("Check")
     table.add_column("Pass")
     table.add_column("Severity")
