@@ -59,6 +59,26 @@ id,standard,checklist,severity
 CL-001,ISO 1101,"Feature control frame contains symbol, tolerance value, and datum references.",High
 ```
 
+You can test with:
+
+- `samples/sample_drawing.svg`
+- `samples/sample_checklist.csv`
+- `samples/sample_ocr.txt`
+
+## API Prototype
+
+Run the backend API:
+
+```powershell
+uvicorn cdcopilot.api:app --reload
+```
+
+Health check:
+
+```text
+http://127.0.0.1:8000/health
+```
+
 ## Internal Training Data Format
 
 Prepare a CSV with these columns:
