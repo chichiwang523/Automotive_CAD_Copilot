@@ -8,7 +8,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Training entrypoint placeholder for a vision-language drawing reviewer.")
     parser.add_argument("--train-jsonl", default="data/processed/internal_reviews.jsonl")
     parser.add_argument("--base-model", default="Qwen/Qwen2.5-VL-7B-Instruct")
-    parser.add_argument("--out", default="models/cdcopilot-reviewer")
+    parser.add_argument("--out", default="models/cad-copilot-reviewer")
     args = parser.parse_args()
 
     train_path = Path(args.train_jsonl)
