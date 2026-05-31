@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pypytest_cache/
+*.py[cod]
+*.egg-info/
+
+# Keep raw datasets local unless a license review approves redistribution.
+data/raw/public/deepcad/
+data/raw/public/abc-dataset/*
+data/raw/public/trview2cad/*
+!data/raw/public/abc-dataset/SOURCE.txt
+!data/raw/public/trview2cad/SOURCE.txt
+!data/raw/public/trview2cad/DOWNLOAD_ERROR.txt
+
+models/
+reports/
