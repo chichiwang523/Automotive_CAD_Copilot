@@ -1,0 +1,8 @@
+id,standard,checklist,severity
+title_block_standard,ISO 8015,"Drawing title block should state the governing drawing/GPS standard.",high
+title_block_scale_revision,ISO 7200,"Drawing should contain scale, revision, material, part number, and sheet fields.",medium
+dimensions_have_tolerances,ISO 129-1,"Critical dimensions should have explicit tolerance or a referenced general tolerance.",high
+datum_defined_before_use,ISO 5459,"Datum identifiers referenced in feature control frames should be defined on the drawing.",high
+feature_control_frame_syntax,ISO 1101,"Feature control frames should contain a characteristic, tolerance value, and required datum references.",high
+surface_texture_syntax,ISO 21920,"Surface texture indications should use recognized parameter names and numeric values.",medium
+notes_no_ambiguous_language,Internal MD,"Notes should avoid ambiguous language such as typical, approximate, or as required unless internally allowed.",low
