@@ -1,0 +1,32 @@
+datasets:
+  - id: internal-checklist-pilot
+    type: private
+    purpose: Supervised fine-tuning and evaluation with company-specific checklist labels.
+    expected_path: data/raw/internal
+    required_fields:
+      - image_or_pdf
+      - ocr_text
+      - checklist_id
+      - pass_fail
+      - evidence_bbox
+      - reviewer_comment
+  - id: trview2cad
+    type: public
+    purpose: Multi-view mechanical drawing/CAD research data, useful for pretraining drawing layout understanding.
+    source: https://github.com/VITA-Group/TriView2CAD
+    license_note: Check upstream license before commercial use.
+  - id: abc-dataset
+    type: public
+    purpose: Large CAD model corpus that can be rendered into synthetic 2D drawings with known geometry.
+    source: https://deep-geometry.github.io/abc-dataset/
+    license_note: Check upstream terms before commercial use.
+  - id: deepcad
+    type: public
+    purpose: CAD command sequence dataset; useful for synthetic drawing generation and geometry pretraining.
+    source: https://github.com/ChrisWu1997/DeepCAD
+    license_note: Check upstream license before commercial use.
+  - id: patent-drawings
+    type: public
+    purpose: Auxiliary OCR/layout pretraining only; not automotive GD&T-specific.
+    source: https://developer.uspto.gov/product/patent-examination-research-dataset-public-pair
+    license_note: Public patent data, but verify redistribution constraints.
