@@ -1,6 +1,6 @@
-# CDCopilot
+# CAD Copilot
 
-CDCopilot is a starter project for automotive 2D CAD drawing review. It combines OCR/layout extraction, deterministic checklist rules, and a trainable vision-language reviewer for ISO GPS/GD&T style drawing checks.
+CAD Copilot is a starter project for automotive 2D CAD drawing review. It combines OCR/layout extraction, deterministic checklist rules, and a trainable vision-language reviewer for ISO GPS/GD&T style drawing checks.
 
 ## What This First Version Covers
 
